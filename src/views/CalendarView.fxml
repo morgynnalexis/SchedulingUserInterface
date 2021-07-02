@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="schedulinguserinterface.CalendarViewController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Appointment Calendar">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="50.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="weekViewBttn" mnemonicParsing="false" onAction="#displayWeek" text="Week View">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="monthViewBttn" defaultButton="true" mnemonicParsing="false" onAction="#displayMonth" text="Month View">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <TableView fx:id="apptCalTable" prefHeight="276.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="typeCol" prefWidth="150.0" text="Type" />
+                <TableColumn fx:id="apptStartTimeCol" prefWidth="170.0" text="Appointment Start Time" />
+                  <TableColumn fx:id="apptEndTimeCol" prefWidth="170.0" text="Appointment End Time" />
+                  <TableColumn fx:id="custIdCol" prefWidth="100.0" text="Customer ID" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <bottom>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="backBttn" mnemonicParsing="false" onAction="#goBack" text="Back" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="50.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
